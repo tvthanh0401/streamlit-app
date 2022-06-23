@@ -26,7 +26,7 @@ with col2:
     st.header('List of event')
     with st.container():
         for track in tracks:
-            if st.button(f'00:00:{str(track[0] + 1).zfill(2)} {track[1]}'):
+            if st.button(f'00:00:{str(track[0]).zfill(2)} {track[1]}'):
                 output_video.text('Please wait')
                 time.sleep(0.5)
                 output_video.video('./video_output.webm', start_time=track[0])
