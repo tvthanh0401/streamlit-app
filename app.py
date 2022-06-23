@@ -28,5 +28,5 @@ with col2:
         for track in tracks:
             if st.button(f'00:00:{str(track[0] + 1).zfill(2)} {track[1]}'):
                 output_video.text('Please wait')
-                time.sleep(0.2)
+                time.sleep(0.5)
                 output_video.video('./video_output.webm', start_time=track[0])
